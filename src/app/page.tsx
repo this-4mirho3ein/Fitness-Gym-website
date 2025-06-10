@@ -51,9 +51,17 @@ function Homepage() {
             <SheetTitle></SheetTitle>
           </SheetHeader>
           {form === "sign-up" ? (
-            <SignUp routing="hash" signInUrl="/?form=sign-in" fallbackRedirectUrl={'/account'}/>
+            <SignUp
+              routing="hash"
+              signInUrl="/?form=sign-in"
+              fallbackRedirectUrl={"/account"}
+            />
           ) : (
-            <SignIn routing="hash" signUpUrl="/?form=sign-up" fallbackRedirectUrl={'/account'} />
+            <SignIn
+              routing="hash"
+              signUpUrl="/?form=sign-up"
+              fallbackRedirectUrl={"/account"}
+            />
           )}
         </SheetContent>
       </Sheet>

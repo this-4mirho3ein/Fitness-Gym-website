@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {
-  ClerkProvider,
-} from '@clerk/nextjs';
-
+import { ClerkProvider } from "@clerk/nextjs";
+import CusotmLayout from "@/custom-layout";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Gym Website",
@@ -17,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+      <html lang="en">
+        <body>
+          <CusotmLayout>{children}</CusotmLayout>
+          <Toaster position="top-center" reverseOrder={false} />
+        </body>
+      </html>
     </ClerkProvider>
-
   );
 }
