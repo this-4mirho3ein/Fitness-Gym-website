@@ -6,7 +6,7 @@ import {
   SheetContent,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { Heart, Home, List, LogOut, ShieldCheck, User2 } from "lucide-react";
+import { FolderKanban, Heart, Home, List, LogOut, ShieldCheck, User2 } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { SignOutButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
@@ -50,6 +50,11 @@ function MenuItems({ user, openMenuItems, setOpenMenuItems }: IMenuItemsProps) {
       name: "Home",
       icon: <Home size={iconSize} />,
       route: "/account",
+    },
+        {
+      name: "Plans",
+      icon: <FolderKanban size={iconSize} />,
+      route: "/account/admin/plans",
     },
     {
       name: "Users",
